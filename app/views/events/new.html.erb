@@ -1,0 +1,30 @@
+<h1>New Event</h1>
+
+<%= form_for(@event) do |f| %>
+    <div class="">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+    <div class="">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+    </div>
+    <div class="">
+        <%= f.label :start_date %>
+        <%= f.datetime_select :start_date %>
+    </div>
+    <div class="">
+        <%= f.label :end_date %>
+        <%= f.datetime_select :end_date %>
+    </div>
+    <div class="">
+        <%= f.label :venue %>
+        <%= f.text_field :venue %>
+    </div>
+    <div class="">
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+    </div>
+
+    <%= f.submit %>
+<% end %>
