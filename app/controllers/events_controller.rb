@@ -20,6 +20,30 @@ class EventsController < ApplicationController
     def index
         @events = Event.all
     end
+
+    def edit
+        @event = Event.find(params[:id])
+    end
+
+    def update
+        @event = Event.find(params[:id])
+
+        if @event.update(event_params)
+            flash[:notice] = "Event updated"
+            redirect_to @event
+        else
+            flash.now[:alert] = "Event not updated!"
+            render "edit"
+        end
+    end
+
+    def destroy
+        @event = Event.find(params[:id])
+        @event.destroy
+        flash[:alert] = "Event deleted successfully!"
+        redirect_to events_url
+    end
+
     private
 
         def event_params

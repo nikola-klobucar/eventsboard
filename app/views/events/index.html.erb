@@ -1,8 +1,12 @@
+<%= flash[:alert] %>
+
 <h1>All Events</h1>
+
+<p><%= link_to "Add event", new_event_path %></p>
 
 <% @events.each do |event| %>
     <div class="">
-        <h4><%= event.title %></h4>
+        <h4><%= link_to event.title, event_path(event) %></h4>
         <p><%= event.start_date%></p>
         <p><%= event.end_date%></p>
         <p><%= event.venue%>, <%= event.location%></p>
