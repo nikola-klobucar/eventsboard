@@ -1,5 +1,20 @@
-<h1>Edit Event</h1>
 <%= flash[:notice] %>
+<%= flash[:alert] %>
+
+
+<h1>Edit Event</h1>
+
+<% if @event.errors.any?  %>
+    <div class="", id="error_explanation">
+        <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event
+        being saved:</h2>
+        <ul>
+            <%=@event.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
 
 <%= form_for(@event) do |f| %>
     <div class="">
