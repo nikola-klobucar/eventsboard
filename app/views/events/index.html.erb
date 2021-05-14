@@ -7,8 +7,8 @@
 <% @events.each do |event| %>
     <div class="">
         <h4><%= link_to event.title, event_path(event) %></h4>
-        <p><%= event.start_date%></p>
-        <p><%= event.end_date%></p>
+        <p><%= time_format(event.start_date)%></p>
+        <p><%= time_format(event.end_date)%></p>
         <p><%= event.venue%>, <%= event.location%></p>
     </div>
 <%end%>

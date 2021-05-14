@@ -1,13 +1,16 @@
-<h1><%= @event.title%></h1>
 <%= flash[:notice] %>
+
+<% provide(:title, @event.title) %>
+
+<h1><%= @event.title%></h1>
 
 <div class="">
 
     <p><%= @event.description %></p>
 
-    <p><%= @event.start_date %></p>
+    <p><%= time_format(@event.start_date)%></p>
 
-    <p><%= @event.end_date %></p>
+    <p><%= time_format(@event.end_date)%></p>
 
     <p><%= @event.venue %></p>
 
