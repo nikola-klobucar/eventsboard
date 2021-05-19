@@ -10,33 +10,20 @@
     </div>
 <% end %>
 
-<%= form_for(event) do |f| %>
-    <div class="">
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-    </div>
-    <div class="">
-        <%= f.label :description %>
-        <%= f.text_area :description %>
-    </div>
-    <div class="">
-        <%= f.label :start_date %>
-        <%= f.datetime_select(:start_date, order: [:day, :month, :year], start_year: Date.
-        current.year, ampm: true, prompt: true) %>
-    </div>
-    <div class="">
-        <%= f.label :end_date %>
-        <%= f.datetime_select(:end_date, order: [:day, :month, :year], start_year: Date.
-        current.year, ampm: true, prompt: true) %>
-    </div>
-    <div class="">
-        <%= f.label :venue %>
-        <%= f.text_field :venue %>
-    </div>
-    <div class="">
-        <%= f.label :location %>
-        <%= f.text_field :location %>
-    </div>
+<%= simple_form_for(event) do |f| %>
+    <%= f.input :title  %>
 
-    <%= f.submit %>
+    <%= f.input :description  %>
+
+    <%= f.input :start_date, as: :datetime, start_year: Date.today.year, ampm:true,
+        order: [:day, :month, :year]%>
+
+    <%= f.input :end_date, as: :datetime, start_year: Date.today.year, ampm:true,
+        order: [:day, :month, :year]%>
+
+    <%= f.input :venue  %>
+
+    <%= f.input :location  %>
+
+    <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
