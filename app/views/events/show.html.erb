@@ -4,7 +4,7 @@
     <h1 id="show-title"><%= @event.title%></h1>
     <ul class="actions">
         <li><%= link_to "Edit event", edit_event_path(@event), class: "edit"  %></li>
-        <li><%= link_to "Delete event", edit_event_path(@event), method: :delete, data: {
+        <li><%= link_to "Delete event", event_path(@event), method: :delete, data: {
             confirm: "Are you sure?"}, class: "delete"  %></li>
     </ul>
 </header>
