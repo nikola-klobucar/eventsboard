@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container-fluid">
 <!-- Brand and toggle get grouped for better mobile display -->
 <div class="navbar-header">
@@ -16,8 +16,14 @@
   <ul class="nav navbar-nav">
     <li class="<%= "active" if current_page?("/")%>"> <%= link_to "Home",
         root_path %></li>
-    <li class="<%= "active" if current_page?("/events")%>"> <%= link_to "Events",
-        events_path %></li>
+    <li class="<%= "active" if current_page?("/events")%>">
+        <%= link_to "Events", events_path %></li>
+    <% unless user_signed_in? %>
+        <li class="<%= "active" if current_page?("/users/sign_up")%>">
+            <%= link_to "Sign up", new_user_registration_path  %></li>
+        <li class="<%= "active" if current_page?("/users/sign_in")%>">
+            <%= link_to "Sign in", new_user_session_path  %></li>
+    <% end %>
   </ul>
   <form class="navbar-form navbar-left">
     <div class="form-group">
@@ -26,7 +32,12 @@
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
   <ul class="nav navbar-nav navbar-right">
-    <li><a href="#">Link</a></li>
+    <% if user_signed_in? %>
+        <li class="<%= "active" if current_page?("/users/edit")%>">
+            <%= link_to current_user.email, edit_user_registration_path  %></li>
+        <li class="<%= "active" if current_page?("/users/edit")%>">
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+    <% end %>
   </ul>
 </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
