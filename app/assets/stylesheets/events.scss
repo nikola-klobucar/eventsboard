@@ -29,7 +29,7 @@
 .sidebar .organizer,
 .sidebar .tags,
 .sidebar .attendees,
- /*.sidebar.likes,*/
+.sidebar .likes,
  #like, #dislike,
 .comments,
 .event-end {
@@ -82,13 +82,13 @@
   }
 }
 
-// .sidebar .likes {
-//   font-size: 24px;
+.sidebar .likes {
+  font-size: 24px;
 
-//   &:before {
-//     @extend .fa-heart;
-//   }
-// }
+  &:before {
+    @extend .fa-heart;
+  }
+}
 
 #like {
   font-size: 24px;
