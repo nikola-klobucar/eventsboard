@@ -1,12 +1,46 @@
-<h1>All Events</h1>
+<header>
+    <h1>All Events</h1>
 
-<p><%= link_to "Add event", new_event_path %></p>
+    <ul class="actions">
+        <li><%= link_to "New event", new_event_path, class: "new"  %></li>
+    </ul>
+</header>
+
+<div class="row">
+    <div class="col-sm-3 pull-right">
+        <div class="sidebar">
+            <h3 class="discover">Discover</h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="<%= "active" if current_page?("/events")  %>"><%= link_to "ALL EVENTS"
+                    %></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-9">
+    <h3>Discover and register to attend your favourite event right here</h3>
+
+</div>
 
 <% @events.each do |event| %>
-    <div class="">
-        <h4><%= link_to event.title, event_path(event) %></h4>
-        <p><%= time_format(event&.start_date)%> <%=fa_icon "camera-retro"  %></p>
-        <p><%= time_format(event&.end_date)%></p>
-        <p><%= event.venue%>, <%= event.location%></p>
+    <div class="col-sm-9 pull-felt">
+        <%= link_to event_path(event) do  %>
+        <div class="events">
+            <div class="row">
+                <div class="col-sm-3">
+                    <%= image_tag "https://via.placeholder.com/200x100"  %>
+                </div>
+                <div class="col-sm-9">
+                    <h3 class="event-title"><%= event.title  %></h3>
+                    <p class="lead-time">
+                        <span class="event-start"><%= time_format(event.start_date)  %></span>
+                        <span class="pull-right">Organized by:</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <% end %>
     </div>
 <% end %>

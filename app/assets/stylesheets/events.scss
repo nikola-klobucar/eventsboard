@@ -1,3 +1,233 @@
-// Place all the styles related to the Events controller here.
+// Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.events h3.event-title {
+  margin: 0 0 5px 0;
+  color: #e0336b;
+  font-size: 18px;
+  font-weight: 400px;
+  line-height: 22px;
+}
+
+.event-image {
+  @extend .img-responsive;
+}
+
+.events {
+  border-bottom: 1px solid #eaeaea;
+  padding: 5px;
+  color: #0b5467;
+}
+
+.events:hover {
+  background: #f8f8f8;
+}
+
+.event-venue,
+.event-start,
+.sidebar .discover,
+.sidebar .organizer,
+.sidebar .tags,
+.sidebar .attendees,
+ /*.sidebar.likes,*/
+ #like, #dislike,
+.comments,
+.event-end {
+
+  &:before {
+    font-family: "FontAwesome";
+    padding-right: 0.5em;
+  }
+}
+
+.event-venue {
+  &:before {
+    @extend .fa-map-marker;
+  }
+}
+
+.event-start {
+  &:before {
+    @extend .fa-calendar;
+  }
+}
+
+.event-end {
+  &:before {
+    @extend .fa-calendar-o;
+  }
+}
+
+.sidebar .discover {
+  font-size: 24px;
+
+  &:before {
+    @extend .fa-compass;
+  }
+}
+
+.sidebar .organizer {
+  font-size: 24px;
+
+  &:before {
+    @extend .fa-user;
+  }
+}
+
+.sidebar .tags {
+  font-size: 24px;
+
+  &:before {
+    @extend .fa-tag;
+  }
+}
+
+// .sidebar .likes {
+//   font-size: 24px;
+
+//   &:before {
+//     @extend .fa-heart;
+//   }
+// }
+
+#like {
+  font-size: 24px;
+
+  &:before {
+    @extend .fa-thumbs-o-up;
+  }
+}
+
+#dislike {
+  font-size: 24px;
+
+  &:before {
+    @extend .fa-thumbs-o-down;
+  }
+}
+
+a #like,
+a #dislike,
+.sidebar h4 {
+  color: #1d4464;
+}
+
+.sidebar h4.tags {
+  margin-bottom: 20px;
+}
+
+.sidebar .tag {
+  font-weight: bold;
+  padding: 5px;
+  background: #1d4464;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar a .tag {
+  color: #fff;
+}
+
+
+.sidebar .attendees {
+  font-size: 24px;
+
+  &:before {
+    @extend .fa-users;
+  }
+}
+
+// .comments {
+//   margin: 0;
+
+//   &:before {
+//     @extend .fa-comments-o;
+//   }
+// }
+
+.index-icons {
+  @extend .pull-right;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+
+.sidebar h4 {
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 20px;
+  // color: #1d4464;
+}
+
+.sidebar a {
+  color: #5bc0de;
+}
+
+
+// p.lead-time {
+//   margin: 0 0 5px 0;
+//   padding: 0;
+//   font-size: 14px;
+//   font-weight: 400;
+// }
+
+h1#show-title,
+.event-details h3 {
+  color: #d91e60;
+}
+
+.event-meta {
+  // margin: 0 -20px 20px;
+  padding: 20px;
+  background: #f23677;
+  color: #fff;
+}
+
+.event-details h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.search h4 {
+  margin-bottom: 5px;
+  margin-top: -10px;
+  padding: 5px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #2d2d2d;
+}
+
+// .nav > li > a:hover,
+// .nav > li > a:focus {
+//   background: #e0336b;
+// }
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+   background: #e0336b;
+   font-weight: bold;
+}
+
+.sidebar li > a {
+  color: #23527c;
+  font-weight: 400;
+  font-size: 13px;
+  font-family:  Lato, "Helvetica Neue", "Helvetica";
+}
+
+.sidebar li > a:hover {
+  color: #e0336b;
+  text-decoration: underline;
+}
+
+.sidebar li {
+  @extend .text-justify;
+}

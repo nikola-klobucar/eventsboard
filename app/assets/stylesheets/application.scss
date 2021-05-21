@@ -1,17 +1,156 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "events";
+//@import "home";
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  // background: #f2f2f2;
+  padding-top: 70px;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  @extend .page-header;
+  position: relative;
+  padding-bottom: 0;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    max-width: 55%;
+  }
+}
+
+ul.actions {
+  @extend .list-unstyled;
+  @extend .list-inline;
+  position: absolute;
+  bottom: -2px;
+  right: 2px;
+  max-width: 45%;
+  text-align: right;
+}
+
+a.new,
+a.edit,
+a.delete {
+  @extend .btn;
+
+  &:before {
+    font-family: "FontAwesome";
+    padding-right: 0.5em;
+  }
+}
+
+a.new {
+  @extend .btn-success;
+
+  &:before {
+    @extend .fa-plus;
+  }
+}
+
+a.edit {
+  @extend .btn-primary;
+
+  &:before {
+    @extend .fa-pencil;
+  }
+}
+
+a.delete {
+  @extend .btn-danger;
+
+  &:before {
+    @extend .fa-trash;
+  }
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
+
+span.past {
+  background: #c9302c;
+
+}
+
+span.upcoming {
+  background: #449d44;
+}
+
+span.upcoming,
+span.past {
+  color: #fff;
+  font-weight: bold;
+  border-radius: 3px;
+
+  &:before {
+    font-family: "FontAwesome";
+    padding: 1.5em;
+  }
+}
+
+span.upcoming {
+  &:before {
+    @extend .fa-check;
+  }
+}
+
+span.past {
+  &:before {
+    @extend .fa-close;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
  */
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
