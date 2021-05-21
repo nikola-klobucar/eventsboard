@@ -1,20 +1,52 @@
 <% provide(:title, @event.title) %>
 
-<h1><%= @event.title%></h1>
+<header>
+    <h1 id="show-title"><%= @event.title%></h1>
+    <ul class="actions">
+        <li><%= link_to "Edit event", edit_event_path(@event), class: "edit"  %></li>
+        <li><%= link_to "Delete event", edit_event_path(@event), method: :delete, data: {
+            confirm: "Are you sure?"}, class: "delete"  %></li>
+    </ul>
+</header>
 
-<div class="">
+<div class="row">
+    <div class="col-sm-9">
+        <%= image_tag "https://via.placeholder.com/1080x500", class: "event-image" %>
+        <div class="event-meta">
+            <h4><span class="event-start"><strong>Starts:</strong>
+            <%= time_format(@event.start_date) %></span></h4>
 
-    <p><%= @event.description %></p>
+            <p>
+                <span class="event-end"><strong>Ends:</strong>
+                <%= time_format(@event.end_date)  %></span>
+            </p>
+        </div>
 
-    <p><%= time_format(@event.start_date)%></p>
+        <div class="event-details">
+            <h3>Event Details</h3>
+            <p><%= @event.description  %></p>
+        </div>
+    </div>
 
-    <p><%= time_format(@event.start_date)%></p>
-
-    <p><%= @event.venue %></p>
-
-    <p><%= @event.location %></p>
+    <div class="col-sm-3">
+        <div class="sidebar">
+            <h4 class="organizer">Organizer name</h4>
+            <p>
+            <span class="event-venue"><%= @event.venue  %>, <strong><%= @event.location %>
+            </strong></span>
+            </p>
+            <hr>
+            <div class="sidebar">
+                <h4 class="tags">Tags</h4>
+            </div>
+            <hr>
+            <div class="sidebar">
+                <h4 class="attendees">Attendees</h4>
+            </div>
+            <hr>
+            <div class="sidebar">
+                <h4 class="likes">Likes</h4>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    <%= link_to "Edit event", edit_event_path(@event)  %> | <%= link_to "Delete event",
-    event_path{@event}, method: :delete, data: {confirm: "Are you sure?"}   %>
-</p>

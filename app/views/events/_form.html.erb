@@ -1,3 +1,6 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
 <%= simple_form_for(event) do |f| %>
     <%= f.input :title  %>
 
@@ -15,3 +18,7 @@
 
     <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
+
+    <p><%= link_to "Back", events_path  %></p>
+    </div>
+</div>
