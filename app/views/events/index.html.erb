@@ -26,6 +26,9 @@
                     </div>
                     <div class="col-sm-9">
                         <h3 class="event-title"><%= event.title  %></h3>
+                        <p>
+                            <span class="event-venue"><%=event.venue  %>  - <strong><%= event.location%></strong></span>
+                        </p>
                         <p class="lead-time">
                             <span class="event-start"><%= time_format(event.start_date)  %></span>
                             <span class="pull-right">Organized by:</span>
