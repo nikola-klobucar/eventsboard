@@ -3,7 +3,7 @@
     <p><%= @user  %> works at <strong><%=@user.organization_name  %></strong></p>
 
     <ul class="actions">
-        <li><%= link_to "Start Event", new_event_path, class: "new" %></li>
+        <li><%= link_to "Start Event", new_event_path, class: "new" if policy(Event).new? %></li>
     </ul>
 </header>
 

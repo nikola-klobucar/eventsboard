@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
     before_action :configure_permitted_parameters, if: :devise_controller?
+    after_action :verify_authorized, unless: :devise_controller?
+
+    include Pundit
+    rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
 
     private
@@ -13,5 +17,10 @@ class ApplicationController < ActionController::Base
                 user.permit(:email, :password, :password_confirmation, :current_password,
                 :first_name, :last_name, :username, :organization_name)
             end
+        end
+
+        def user_not_authorized
+            flash[:alert] = "You are not authorized to perform this action!"
+            redirect_to(request.referrer || root_path)
         end
 end
