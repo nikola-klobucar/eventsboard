@@ -1,0 +1,101 @@
+// Place all the styles related to the admin/application controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.admin {
+  background-color: #222d32;
+  margin-top: 70px;
+}
+
+.admin-sidebar {
+  padding-bottom: 10px;
+  height: auto;
+}
+
+.admin a:hover {
+    text-decoration: none;
+}
+
+.user-panel {
+  position:relative;
+  width:100%;
+  padding:10px;
+  overflow:hidden;
+}
+
+.user-panel:before,.user-panel:after {
+  content:" ";
+  display:table;
+}
+
+.user-panel:after {
+  clear:both;
+}
+
+.user-panel>.image>img {
+  width:100%;
+  max-width:45px;
+  height:auto;
+}
+
+.user-panel>.info {
+  padding:5px 5px 5px 15px;
+  line-height:1;
+  position:absolute;
+  left:55px;
+}
+
+.user-panel>.info>p {
+  font-weight:600;
+  margin-bottom:9px;
+}
+
+.user-panel>.info>a {
+  text-decoration:none;
+  padding-right:5px;
+  margin-top:3px;
+  font-size:11px;
+}
+
+.user-panel>.info>a>.fa,
+.user-panel>.info>a>.ion,
+.user-panel>.info>a>.glyphicon {
+  margin-right:3px;
+}
+
+.user-panel > .info > p {
+  font-weight: 600;
+  margin-bottom: 9px;
+  color: #fff;
+}
+
+.admin-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-menu > li.header {
+  color: #4b646f;
+  background: #1a2226;
+  margin: -15px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-menu > li:hover > a,
+.skin-blue .sidebar-menu > li.active > a {
+  color: #fff;
+  background: #1e282c;
+  border-left-color: #3c8dbc;
+}
+
+.admin-menu > li > a {
+  color: #ddd;
+  // background: #1e282c;
+  // border-left-color: #3c8dbc;
+}
+
+.admin-menu > li > a {
+  padding: 12px 5px 12px 15px;
+  display: block;
+}

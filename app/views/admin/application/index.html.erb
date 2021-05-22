@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-sm-3 admin">
+        <div class="admin-sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <span>image</span>
+                </div>
+                <div class="pull-left info">
+                    <p><%= current_user.full_name  %></p>
+                </div>
+            </div>
+        </div>
+        <ul class="admin-menu">
+            <li class="text-uppercase text-center header">Main navigation</li>
+            <li>
+                <%= link_to '#' do  %>
+                    <%= fa_icon "users" %>
+                    <span>User</span>
+                    <span class="label label-primary pull-right">users</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to '#' do  %>
+                    <%= fa_icon "th" %>
+                    <span>Categories</span>
+                    <span class="label label-info pull-right">categories</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to '#' do  %>
+                    <%= fa_icon "user" %>
+                    <span>Attendees</span>
+                    <span class="label label-danger pull-right">attendees</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to events_path do %>
+                    <%= fa_icon "calendar" %>
+                    <span>Events</span>
+                    <span class="label label-warning pull-right"><%= @events.count %></span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to '#' do  %>
+                    <%= fa_icon "tag" %>
+                    <span>Tags</span>
+                    <span class="label label-default pull-right">tags</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to '#' do  %>
+                    <%= fa_icon "comments" %>
+                    <span>Comments</span>
+                    <span class="label label-primary pull-right">comments</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to '#' do  %>
+                    <%= fa_icon "heart" %>
+                    <span>Likes</span>
+                    <span class="label label-danger pull-right">likes</span>
+                <% end %>
+            </li>
+        </ul>
+    </div>
+        <div class="col-sm-9">
+            <header>
+                <h1>Dashboard <small>Control Panel</small></h1>
+            </header>
+
+            <h4>Welcome to Admin Dashborad of Eventsboard</h4>
+        </div>
+</div>
