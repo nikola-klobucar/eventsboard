@@ -28,9 +28,9 @@
                     <td><%= time_format(event.start_date)  %></td>
                     <td><%= event_status(event)  %></td>
                     <td>
-                        <%= link_to "Edit", edit_event_path(event), class: "edit"  %>
+                        <%= link_to "Edit", edit_event_path(event), class: "edit" if policy(event).edit? %>
                         <%= link_to "Delete", edit_event_path(event), method: :delete,
-                        method: :delete, data: {confirm: "Are you sure?"}, class: "delete"  %>
+                        method: :delete, data: {confirm: "Are you sure?"}, class: "delete" if policy(event).destroy? %>
                     </td>
                 </tr>
             <% end %>
