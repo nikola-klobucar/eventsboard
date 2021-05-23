@@ -13,17 +13,17 @@
         <ul class="admin-menu">
             <li class="text-uppercase text-center header">Main navigation</li>
             <li>
-                <%= link_to '#' do  %>
+                <%= link_to admin_users_path do  %>
                     <%= fa_icon "users" %>
                     <span>User</span>
-                    <span class="label label-primary pull-right">users</span>
+                    <span class="label label-primary pull-right"><%= @users.count  %></span>
                 <% end %>
             </li>
             <li>
-                <%= link_to '#' do  %>
+                <%= link_to admin_categories_path do  %>
                     <%= fa_icon "th" %>
                     <span>Categories</span>
-                    <span class="label label-info pull-right">categories</span>
+                    <span class="label label-info pull-right"><%= @categories.count  %></span>
                 <% end %>
             </li>
             <li>
