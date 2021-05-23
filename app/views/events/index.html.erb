@@ -13,35 +13,39 @@
             <ul class="nav nav-pills nav-stacked">
                 <li class="<%= "active" if current_page?("/events")  %>"><%= link_to "ALL EVENTS"
                     %></li>
+                <%  @categories.each do |category| %>
+                    <li class="<%= "active" if current_page?("/categories/#{category.id}")%>
+                        text-uppercase">
+                    <%= link_to category.name, category_path(category)  %></li>
+                <% end %>
             </ul>
         </div>
     </div>
-    <% @events.each do |event| %>
-        <div class="col-sm-9 pull-felt">
-            <%= link_to event_path(event) do  %>
-            <div class="events">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <%= image_tag "great-teacher-onizuka-smoke-78339-1920x1080.jpg", class: "event-image"  %>
-                    </div>
-                    <div class="col-sm-9">
-                        <h3 class="event-title"><%= event.title  %></h3>
-                        <p>
-                            <span class="event-venue"><%=event.venue  %>  - <strong><%= event.location%></strong></span>
-                        </p>
-                        <p class="lead-time">
-                            <span class="event-start"><%= time_format(event.start_date)  %></span>
-                            <span class="pull-right">Organized by: <%= event.organizer.to_s %></span>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <% end %>
-        </div>
-    <% end %>
-</div>
-
 <div class="col-sm-9">
     <h3>Discover and register to attend your favourite event right here</h3>
+</div>
+<% @events.each do |event| %>
+    <div class="col-sm-9 pull-felt">
+        <%= link_to event_path(event) do  %>
+        <div class="events">
+            <div class="row">
+                <div class="col-sm-3">
+                    <%= image_tag "great-teacher-onizuka-smoke-78339-1920x1080.jpg", class: "event-image"  %>
+                </div>
+                <div class="col-sm-9">
+                    <h3 class="event-title"><%= event.title  %></h3>
+                    <p>
+                        <span class="event-venue"><%=event.venue  %>  - <strong><%= event.location%></strong></span>
+                    </p>
+                    <p class="lead-time">
+                        <span class="event-start"><%= time_format(event.start_date)  %></span>
+                        <span class="pull-right">Organized by: <%= event.organizer.to_s %></span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <% end %>
+    </div>
+<% end %>
 </div>

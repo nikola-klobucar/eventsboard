@@ -7,6 +7,7 @@ class EventsController < ApplicationController
         @events = Event.order(created_at: :desc)
         authorize @events, :index? # Ovo zamjenjuje before_action: :authorize_owner!
         # zbog gem-a "Pundit" u application_controler.rb
+        @categories = Category.order(:name)
     end
 
     def show
