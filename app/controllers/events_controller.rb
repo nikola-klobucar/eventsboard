@@ -59,9 +59,10 @@ class EventsController < ApplicationController
     private
 
     def set_event
-        @event = Event.find(params[:id])
+        @event = Event.friendly.find(params[:id])
 
         # authorize @event
+
     rescue ActiveRecord::RecordNotFound
         flash[:alert] = "The page you just requested does not exist."
         redirect_to events_url

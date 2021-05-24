@@ -1,0 +1,179 @@
+[33mcommit 12698cbd77656b403bb247466b7709ea2773d0b1[m[33m ([m[1;36mHEAD -> [m[1;32mfile_upload[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sun May 23 16:44:33 2021 +0200
+
+    Add ability to upload images
+
+[33mcommit 6497028ae6abfea96e13096a6f72159f35c6634d[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m, [m[1;32madmin[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sun May 23 15:49:57 2021 +0200
+
+    Create category show page for all users
+
+[33mcommit 2d425803c64004e76620b6ac40057a4decafba30[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sun May 23 15:16:03 2021 +0200
+
+    Ability edit update and delete category by admin
+
+[33mcommit 85081796353723f7feff8ebaa1b6799c074ed594[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sun May 23 14:26:11 2021 +0200
+
+    Ability to create a new category by admin
+
+[33mcommit 1e42658b2b1105796ca599706e828a789b066801[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sat May 22 20:51:17 2021 +0200
+
+    Add admin dashboard
+
+[33mcommit dd78a0f4d0915b6332c87ab89a932354107a684c[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sat May 22 19:44:33 2021 +0200
+
+    Add admin to users
+
+[33mcommit 4c498a772684fa03ab8b264b021a8a424d5b7df5[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sat May 22 19:34:56 2021 +0200
+
+    Fix bug on a show page
+
+[33mcommit 63dda1794a0bd6dd322f64bcb66ee6ce57b8df11[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sat May 22 19:29:08 2021 +0200
+
+    Add authorization to app with Pundit gem
+
+[33mcommit 20041061c7b8022bcaae3f33d1ee9768f88ae9f0[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sat May 22 17:49:45 2021 +0200
+
+    Update Gemfile with Essential Gems for Project
+
+[33mcommit 3a5fb6e5ec17f23516684e850b49e99a35bfad0e[m[33m ([m[1;32mauthentication[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sat May 22 17:23:42 2021 +0200
+
+    Add user show page
+
+[33mcommit 2ff0ae6292b9f58d5d6d6d9ec170f297ce8533ea[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Sat May 22 16:39:48 2021 +0200
+
+    Add strong parameter to devise
+
+[33mcommit f865bdc5d05b5409f7469eea31b4d77d9be650de[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 21 20:19:52 2021 +0200
+
+    Style devise views
+
+[33mcommit e425392c4f9c49075fb9f90503dfce1b5ad1b8fc[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 21 19:55:54 2021 +0200
+
+    Associate users and events
+
+[33mcommit 3431ea87cf4287952c252efdad45564369c13c5f[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 21 18:28:47 2021 +0200
+
+    Generate users for device
+
+[33mcommit 68181c469c5f5068e3d392e35df7e7b4448dd4fc[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 21 17:56:27 2021 +0200
+
+    Setup devise
+
+[33mcommit 7dd8bba28b37ecbc47a2d87adc8afd2d60f7e044[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 21 17:45:57 2021 +0200
+
+    Replace placeholder with ipsum
+
+[33mcommit 8665c55dcd52f934dbba1e9b969de8c581998784[m[33m ([m[1;32mnavigation[m[33m, [m[1;32mdesign_show[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 21 16:46:29 2021 +0200
+
+    Style show page and form
+
+[33mcommit 86352b143da5a4ed5d9d8e5f51bc0747e49388fc[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 21 16:03:11 2021 +0200
+
+    Add application style and redesign index
+
+[33mcommit f84c3799672bfee0f580c5cfe4da4ec591ccec72[m[33m ([m[1;32msimple_form[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Wed May 19 19:07:39 2021 +0200
+
+    Add simple form
+
+[33mcommit fddada47d9f138bf203f4dc4112560f1caaa3029[m[33m ([m[1;32muser_interface_gems[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Wed May 19 11:01:37 2021 +0200
+
+    install user interface gems
+
+[33mcommit 4090edb5f6728158e0746e6718061cb595de0192[m[33m ([m[1;32mpartial[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 14 22:23:51 2021 +0200
+
+    Add partial and datetime_select format
+
+[33mcommit b5e5e758affec5ef9120c94887915042d3604f23[m[33m ([m[1;32mhelper_method[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 14 22:02:22 2021 +0200
+
+    Add helper methods
+
+[33mcommit c8f0cbe143df430856487bbdfd41906b8dccf6be[m[33m ([m[1;32mretouch[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 14 19:10:18 2021 +0200
+
+    Refactor and unDRY
+
+[33mcommit b9f3f8ff288cd2edc3463fb2dfb53928031c34e4[m[33m ([m[1;32mvalidations[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 14 18:46:16 2021 +0200
+
+    Add validations
+
+[33mcommit b263c9dd1364930aa9356f8643598d88c1d21b95[m[33m ([m[1;32mrails_console[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 14 18:07:52 2021 +0200
+
+    Rails console and add awesome_print gem
+
+[33mcommit 382aaa8276cc6bf7e9ca328c495bde782274880f[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 14 17:53:36 2021 +0200
+
+    Rearrage actions in EventsController
+
+[33mcommit 41dcfd26caa26865402479edfdf393664309adda[m[33m ([m[1;32mdelete[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Fri May 14 17:50:33 2021 +0200
+
+    Add ability to delete events.
+
+[33mcommit 241eb9eb4ec16571f5d6a6a485cbc7d0cf5f76d2[m[33m ([m[1;32mshow_index[m[33m)[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Tue May 11 20:58:49 2021 +0200
+
+    Add ability to show an event
+
+[33mcommit 73754a90b8a2c97342db0b36c28e08ee5ea14f22[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Tue May 11 20:26:45 2021 +0200
+
+    Add create and new actions
+
+[33mcommit 71f22d0870871f9b56106c5a1710399e1635c08d[m
+Author: nikola-klobucar <nklobucbbb@gmail.com>
+Date:   Tue May 11 18:22:43 2021 +0200
+
+    Initialize Events
