@@ -31,7 +31,48 @@
         </div>
     </div>
 
-    <div class="col-sm-9">
-        <h3>Discover and register to attend your favourite event right here</h3>
+    <div class="search">
+        <div class="col-sm-9">
+            <h3>Discover and register to attend your favourite event right here</h3>
+            <%= form_tag events_path, class: "form-horizontal", method: :get do  %>
+                <div class="form-group form-group-lg">
+                    <div class="col-sm-10">
+                        <%= text_field_tag :query, params[:query], placeholder: "Search events here...",
+                        autofocus: true, class: "form-control"  %>
+                    </div>
+                    <div class="col-sm-2">
+                        <%= submit_tag "Find", class: "btn btn-default btn-lg" %>
+                        <% if params[:query].present? %>
+                            <%= link_to "Clear", events_path  %>
+                        <% end %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
     </div>
+
+    <% @category_events.each do |event| %>
+        <div class="col-sm-9 pull-felt">
+            <%= link_to event_path(event) do  %>
+            <div class="events">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <%= image_tag "#{event.image.url}", class: "event-image" if event.image %>
+                    </div>
+                    <div class="col-sm-9">
+                        <h3 class="event-title"><%= event.title  %></h3>
+                        <p>
+                            <span class="event-venue"><%=event.venue  %>  - <strong><%= event.location%></strong></span>
+                        </p>
+                        <p class="lead-time">
+                            <span class="event-start"><%= time_format(event.start_date)  %></span>
+                            <span class="pull-right">Organized by: <%= event.organizer.to_s %></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <% end %>
+        </div>
+    <% end %>
 </div>
