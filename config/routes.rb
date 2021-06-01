@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     root 'events#index'
     resources :events do
         resources :comments, only: [:create]
+        resources :attendances, only: [:create]
     end
     resources :users, only: [:show]
     resources :categories, only: [:show]

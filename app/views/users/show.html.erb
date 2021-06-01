@@ -1,5 +1,5 @@
 <header>
-    <h1><%= @user  %>'s Events Organized</h1>
+    <h1><%= @user  %>'s Hosted Events</h1>
     <p><%= @user  %> works at <strong><%=@user.organization_name  %></strong></p>
 
     <ul class="actions">
@@ -38,4 +38,44 @@
     </table>
 <% else %>
     <p><%= @user.organization_name  %> has no events yet.</p>
+<% end %>
+
+
+<!-- This is for events to attend -->
+
+<header>
+    <h1><%= @user.first_name %>'s Registered Events</h1>
+</header>
+
+<% if @user.attended_events.any? %>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Event Status</th>
+                <th colspan="3"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @user.attended_events.reverse.each do |event|%>
+                <tr>
+                    <td><%= link_to event.title, event_path(event)  %></td>
+                    <td><%= time_format(event.start_date)  %></td>
+                    <td><%= time_format(event.end_date)  %></td>
+                    <td><%= time_format(event.start_date)  %></td>
+                    <td><%= event_status(event)  %></td>
+                    <td>
+                        <%= link_to "Edit", edit_event_path(event), class: "edit" if policy(event).edit? %>
+                        <%= link_to "Delete", edit_event_path(event), method: :delete,
+                        method: :delete, data: {confirm: "Are you sure?"}, class: "delete" if policy(event).destroy? %>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% else %>
+    <p><%= @user.organization_name  %> does not attend any events yet.</p>
 <% end %>
