@@ -1,0 +1,8 @@
+<header>
+    <h3>Add Comment</h3>
+</header>
+
+<%= simple_form_for [event, comment] do |f|  %>
+    <%= f.input :body %>
+    <%= f.button :submit, class: "btn btn-primary"  %>
+<% end %>
