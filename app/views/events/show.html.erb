@@ -26,20 +26,21 @@
             <h3>Event Details</h3>
             <p><%= @event.description  %></p>
         </div>
-            <%= render "comments/form", event: @event, comment: @comment  %>
+
+        <header>
+            <h3>Comments</h3>
+        </header>
+
+        <div id="comments">
+            <% if @event.comments.any?  %>
+                <%= render @event.comments  %>
+            <% else %>
+            <p>There are no comments for this event</p>
+            <% end %>
+        </div>
+            <%= render "comments/form", event: @event, comment: @comment if policy(@comment).create?  %>
     </div>
 
-    <header>
-        <h3>Comments</h3>
-    </header>
-
-    <div id="comments">
-        <% if @event.comments.any?  %>
-            <%= render @event.comments  %>
-        <% else %>
-        <p>There are no comments for this event</p>
-        <% end %>
-    </div>
 
     <div class="col-sm-3">
         <div class="sidebar">

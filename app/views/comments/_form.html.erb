@@ -3,6 +3,6 @@
 </header>
 
 <%= simple_form_for [event, comment] do |f|  %>
-    <%= f.input :body %>
+    <%= f.input :body, autofocus: true %>
     <%= f.button :submit, class: "btn btn-primary"  %>
 <% end %>
