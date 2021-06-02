@@ -6,8 +6,12 @@
         <li><%= link_to "Edit event", edit_event_path(@event), class: "edit" if policy(@event).edit? %></li>
         <li><%= link_to "Delete event", event_path(@event), method: :delete, data: {
             confirm: "Are you sure?"}, class: "delete" if policy(@event).destroy? %></li>
-        <li><%= link_to "Register", event_attendances_path(@event), method: :post,
-            class: "new" %></li>
+        <% if @event.seats_left? %>
+            <li class="label label-danger text-uppercase">No Seats Available</li>
+        <% else %>
+            <li><%= link_to "Register", event_attendances_path(@event), method: :post,
+                class: "new" %></li>
+        <% end %>
     </ul>
 </header>
 
@@ -58,7 +62,9 @@
             </div>
             <hr>
             <div class="sidebar">
-                <h4 class="attendees">Attendees</h4>
+                <h4 class="attendees">Attendees <span class="pull-right"><%= @event.attendees.count  %></span></h4>
+                <span class="label label-default pull-right <%= "hidden" if @event.seats_left? %>">
+                    <%= pluralize(@event.seats_left,  "Seat")  %> Available</span>
             </div>
             <hr>
             <div class="sidebar">
