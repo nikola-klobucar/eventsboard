@@ -24,7 +24,7 @@
             <tr>
                 <td><%= category.name  %></td>
                 <td><%= time_format(category.created_at)  %></td>
-                <td><%= "Events"  %></td>
+                <td><%= category.events.count  %></td>
                 <td>
                     <%= link_to "View", category_path(category)  %> | <%= link_to "Edit", edit_admin_category_path(category) %>
                     | <%= link_to "Delete", admin_category_path(category),

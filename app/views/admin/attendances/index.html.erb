@@ -1,0 +1,23 @@
+<header>
+    <h1>All Attendees</h1>
+</header>
+
+<table class="table table-striped table-responsive">
+    <thead>
+        <tr>
+            <th>Attendee</th>
+            <th>Event</th>
+            <th>Seats Left</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @attendances.each do |attendance|  %>
+            <tr>
+                <td><%= attendance.attendee.full_name%></td>
+                <td><%= link_to attendance.attended_event.title, event_path(attendance.attended_event)  %></td>
+                <td><%= attendance.attended_event.seats_left %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
